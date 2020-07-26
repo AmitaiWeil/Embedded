@@ -22,6 +22,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 
 #include "stats.h"
 
@@ -57,11 +58,11 @@ unsigned char find_median(unsigned char *arr)
 		
 		if (SIZE % 2)		// even
 		{
-		median_rest = (arr[SIZE / 2] + arr[(SIZE / 2) + 1] )/ 2;	// average of both middle numbers in the array
+		median_rest = floor((arr[SIZE / 2] + arr[(SIZE / 2) + 1] )/ 2);	// average of both middle numbers in the array
 		}
 		else
 		{
-			median_rest = arr[(SIZE / 2) + 1];
+			median_rest = floor(arr[(SIZE / 2) + 1]);
 		}
 		
 		return median_rest;
@@ -79,7 +80,7 @@ unsigned char find_mean(unsigned char *arr)
 	}
 	
 	
-	aver/= SIZE;
+	aver= floor(aver / SIZE);
 	
 	return aver;
 }

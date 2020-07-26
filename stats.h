@@ -9,32 +9,61 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.h
+ * @brief manipulations on statistics data
  *
- * <Add Extended Description Here>
- *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * implemetion of sorting an array by descending order, 
+ * finally printing the results.
+ 
+ * @author Amitai Weil
+ * @date 26/7/2020
  *
  */
 #ifndef __STATS_H__
 #define __STATS_H__
 
 /* Add Your Declarations and Function Comments here */ 
-
+void sort_array(unsigned char *arr) ;
 /**
- * @brief <Add Brief Description of Function Here>
- *
- * <Add Extended Description Here>
- *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- *
- * @return <Add Return Informaiton here>
+ * @brief sorting given array in ascending order
+ * @param arr - the original array
+ * @return none, sorting done on the original
  */
-
-
+void print_array(unsigned char *arr);
+/**
+ * @brief printint the ascending array
+ * @param arr - the ascending array
+ * @return none
+ */
+unsigned char find_maximum(unsigned char *arr);
+/**
+ * @brief finding the maxmial value in the array
+ * @param arr - the array
+ * @return maximal value
+ */
+unsigned char find_minimum(unsigned char *arr);
+/**
+ * @brief finding the minimal value in the array
+ * @param arr - the array
+ * @return result of minimal value
+ */
+unsigned char find_mean(unsigned char *arr);
+/**
+ * @brief finding the average of the array
+ * @param arr - the array
+ * @return the average result
+ */
+unsigned char find_median(unsigned char *arr);
+/**
+ * @brief finding the median of the given array
+ * @param arr - the array
+ * @return the median of the array
+ */
+void print_statistics(int min, int max, int aver, int med);
+/**
+ * @brief print to screen the statistical restults
+ * @param min, max, aver, med - each of the tests - average, minimal, maximal and median
+ * @return none
+ */
+ 
 #endif /* __STATS_H__ */
